@@ -571,10 +571,12 @@ return false;
 }}
 
 String convertFramesToTimeString(int frames){	// Requirement #4
-  float mm=int(frames/60/60);
-  float ss=int((frames/60))%60;
-  return (nf(int(mm),2)+":"+nf(int(ss),2));
-  
+  String result = "";
+  float totalSeconds = float(frames) / 60;
+  result += nf(floor(totalSeconds/60), 2);
+  result += ":";
+  result += nf(floor(totalSeconds%60), 2);
+  return result;
 
 
 
