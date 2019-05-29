@@ -42,7 +42,7 @@ int playerMoveTimer = 0;
 int playerMoveDuration = 15;
 
 boolean demoMode = false;
-boolean isHit = false;
+
 
 void setup() {
 	size(640, 480, P2D);
